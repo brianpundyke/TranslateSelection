@@ -120,7 +120,8 @@ conjugate() {
         fail "Conjugate" "No verb selected"
     fi
 
-    local url="https://conjugator.reverso.net/conjugation-spanish-verb-$(jq -rn --arg v "$verb" '$v | @uri').html"
+    local url
+    url="https://conjugator.reverso.net/conjugation-spanish-verb-$(jq -rn --arg v "$verb" '$v | @uri').html"
     # Not backgrounded: KDE runs shortcuts as systemd units, which kill leftover children on exit
     xdg-open "$url" >/dev/null 2>&1
 }
@@ -136,7 +137,8 @@ define() {
         fail "Define" "No word selected"
     fi
 
-    local url="https://www.spanishdict.com/translate/$(jq -rn --arg t "$term" '$t | @uri')"
+    local url
+    url="https://www.spanishdict.com/translate/$(jq -rn --arg t "$term" '$t | @uri')"
     # Not backgrounded: KDE runs shortcuts as systemd units, which kill leftover children on exit
     xdg-open "$url" >/dev/null 2>&1
 }

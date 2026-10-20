@@ -41,8 +41,10 @@ Bind each mode to its own keyboard shortcut in your desktop environment or Wayla
 - A Wayland session with `wl-clipboard` (`wl-paste` / `wl-copy`)
 - `curl`
 - `jq`
-- `notify-send` (usually provided by `libnotify-bin`)
-- `xdg-open` (usually provided by `xdg-utils`), for conjugate and define modes
+- `notify-send` (provided by `libnotify-bin` on Debian/Ubuntu, `libnotify` on Fedora)
+- `xdg-open` (provided by `xdg-utils`), for conjugate and define modes
+
+On Fedora: `sudo dnf install wl-clipboard curl jq libnotify xdg-utils`. On Debian/Ubuntu: `sudo apt install wl-clipboard curl jq libnotify-bin xdg-utils`.
 - A [DeepL API](https://www.deepl.com/pro-api) key (the free tier works), for translate mode
 - A [Gemini API](https://aistudio.google.com/apikey) key and/or an [Anthropic API](https://console.anthropic.com/) key, for improve mode
 
